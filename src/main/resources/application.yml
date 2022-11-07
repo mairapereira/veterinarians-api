@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /veterinarians-api
+  port: 8082
+spring:
+  application:
+    name: veterinarians-api
+  security:
+    user:
+      name: pegasus
+      password: test123
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+feign:
+  autoconfiguration:
+    jackson:
+      enabled: true
+person-base-url: http://localhost:8080/persons-api/v1
+pets-base-url: http://localhost:8081/pets-api/v1
